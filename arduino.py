@@ -6,9 +6,8 @@ class Arduino:
         self.my_serial = Serial('/dev/ttyACM0', 9600)
         time.sleep(2)
 
-    def send(self, string):
-        user_in = str.encode(string)
-        self.my_serial.write(user_in)
+    def display(self, title):
+        self.my_serial.write(str.encode(title))
 
     def __del__(self):
         self.my_serial.flush()
