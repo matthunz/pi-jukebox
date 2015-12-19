@@ -16,7 +16,3 @@ class Audio:
 
 Audio.change('music/feather.ogg')
 player.play()
-
-while True:
-    print(round(player.time))
-    time.sleep(1)
